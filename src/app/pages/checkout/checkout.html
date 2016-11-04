@@ -1,0 +1,77 @@
+<div class="container-fluid checkoutOrder">
+    <div class="row checkoutLabel">
+        <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center">
+            <h2>Checkout</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12 text-left billLabel">Billing Details</div>
+            <div class="col-lg-8 col-xs-12">
+                <div class="billDetails">
+                    <div ng-show="!visionForm">
+                        <h3>{{person.name}}</h3>
+                        <p>{{person.street}}</p>
+                        <p>{{person.index}}</p>
+                        <p>{{person.country}}</p>
+                    </div>
+                    <form  ng-show="visionForm">
+                        <input type="text"  ng-model="person.name">
+                        <input type="text"  ng-model="person.street">
+                        <input type="text"  ng-model="person.index">
+                        <input type="text"  ng-model="person.country">
+                        <input type="button" value="save" ng-click="visionFormHandler(false)">
+                    </form>
+                    <button ng-click="visionFormHandler(true)" ng-show="!visionForm">Edit</button>
+                    <button ng-show="visionForm" ng-click="visionFormHandler(false)" >Cancel</button>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xs-12">
+                <div class="orderSummary">
+                    <h3>Order Summary</h3>
+                    <hr>
+                    <div class="nameProduct">
+                        <p class="text-left fll">Flyer Design</p>
+                        <p class="text-right flr">$ 20.00</p>
+                    </div>
+                    <hr>
+                    <div class="totalPrice">
+                        <h2 class="text-left fll">Total</h2>
+                        <h2 class="text-right flr">$ 20.00</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-xs-12">
+                <div class="paymentMethod">
+                    <h2>Select Payment Method</h2>
+                </div>
+                <uib-tabset active="activeJustified" class="chooseMethod" justified="true">
+
+
+                    <uib-tab index="0">
+                        <uib-tab-heading class="tabTrigg">
+                            <img src="assets/images/paypalIco.png" alt="">
+                            <p class="text-center">+ $ 2 handling fee</p>
+                        </uib-tab-heading>
+                        <h4>Add credit during checkout using PayPal.</h4>
+                    </uib-tab>
+                    <uib-tab index="1">
+                        <uib-tab-heading class="tabTrigg">
+                            <h3 class="text-center">Negopon's</h3>
+                            <p class="text-center">Balance $0</p>
+                        </uib-tab-heading>
+                        <h4>2Add credit during checkout using PayPal.</h4>
+                    </uib-tab>
+                </uib-tabset>
+                <div class="overalOrder">
+                    <div class="col-lg-8 col-xs-5 col-md-8"><h3>+ Your Order</h3></div>
+                    <div class="col-lg-2 col-xs-3 col-md-2"><span>Total</span></div>
+                    <div class="col-lg-2 col-xs-4 col-md-2"><span>$ 20.00</span></div>
+                </div>
+                <div class="payButton text-right">
+                    <button ui-sref="home.thanks">Add credit and checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

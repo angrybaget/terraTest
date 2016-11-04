@@ -1,0 +1,150 @@
+<div class="container-fluid checkThanks">
+    <div class="row">
+        <div class="container">
+            <img src="assets/images/checkIco.png" alt="">
+            <h2>THANK YOU !</h2>
+        </div>
+    </div>
+</div>
+<div class="container-fluid tnxLabel">
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <h2>Payment Completed</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid completeOrder">
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12">
+                <h3>Your order is confirmed, Negopon No: 123-321-456</h3>
+            </div>
+            <div class="col-lg-8">
+                <div class="completeTable">
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 adress">
+                        <h2>Delivery Address: </h2>
+                        <ul class="list-unstyled">
+                            <li>{{person.name}}</li>
+                            <li>{{person.street}}</li>
+                            <li>{{person.index}}</li>
+                            <li>{{person.country}}</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 details">
+                        <h2>Payment details:</h2>
+                        <ul class="list-unstyled">
+                            <li>
+                                <p>Payed by</p>
+                                <span>PayPal</span>
+                            </li>
+                            <li>
+                                <p>Order total</p>
+                                <span>$20.00</span>
+                            </li>
+                            <li>
+                                <p>Negopon earned</p>
+                                <span>25</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid tnxLabel">
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-12 text-center">
+                <h2>Print your coupon</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="couponWrapper">
+            <div class="col-lg-12 coupon">
+                <div class="couponHeader">
+                    <div class="couponLabel">
+                        <div class="col-lg-6">
+                            <img src="assets/images/coupLogo.png" alt="">
+                        </div>
+                        <div class="col-lg-6">
+                            <span>Negopon No</span>
+                            <span>123 321 456</span>
+                        </div>
+                    </div>
+                    <div class="couponName">
+                        <img src="assets/images/profileIco.jpg" alt="">
+                        <h2>My Roberto Design</h2>
+                        <div class="rating">
+                            <span uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+                            <span class="label" ng-class="{'label-warning': overStar<30, 'label-info': overStar>=30 && percent<70, 'label-success': overStar>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+                            <p>Customer Rating</p>
+                        </div>
+                    </div>
+                    <div class="couponDescription">
+                        <h2>Recipients:  <span>{{person.name}}</span></h2>
+                        <div class="clear"></div>
+                        <div class="theDeal">
+                            <h3>The Deal</h3>
+                            <p>Description....</p>
+                        </div>
+                    </div>
+                    <div class="text-center statement">
+                        <p>Negopon Validation</p>
+                        <span>16/11/2016 Friday Beetween 11:00am - 12:30pm</span>
+                        <span>You have to redeem on this date and time or NO refund.</span>
+                    </div>
+                </div>
+                <div class="instructionsCoupon">
+                    <div>
+                        <h2>How to use this coupon</h2>
+                        <ul class="">
+                            <li>How to use this coupon</li>
+                            <li>How to use this coupon</li>
+                            <li>How to use this coupon</li>
+                            <li>How to use this coupon</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>My Roberto Design</h3>
+                        <span>Address:</span>
+                        <div class="adressCoupon">
+                            <ul class="list-unstyled">
+                                <li>{{person.street}}</li>
+                                <li>{{person.index}}</li>
+                                <li>{{person.country}}</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <img src="../assets/images/map.jpg" alt="">
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="howToCoupon">
+                    <div>
+                        <h2>How to redeem</h2>
+                        <ul class="text-left">
+                            <li>How to redeem </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>The FIne Print</h2>
+                        <ul>
+                            <li>Purchase bla grunt</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam asperiores autem fugiat impedit nostrum possimus qui quia quidem quos sequi similique sit </li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab </li>
+                        </ul>
+                    </div>
+                    <section class="text-center">
+                        Negotiated pty ltd : Support: support@negotiated.com.au OR <button>CLICK HERE</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
